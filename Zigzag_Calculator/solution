@@ -1,0 +1,15 @@
+def solution(numbers):
+    result = []
+    l = len(numbers)
+    
+    for i in range(l-2):
+        i1 = numbers[i]
+        i2 = numbers[i+1]
+        i3 = numbers[i+2]
+        
+        if (i1 > i2 < i3) or (i1 < i2 > i3):
+            result.append(1)
+        else:
+            result.append(0)
+            
+    return result
