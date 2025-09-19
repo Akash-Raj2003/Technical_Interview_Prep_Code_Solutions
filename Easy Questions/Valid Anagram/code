@@ -1,0 +1,26 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        countS,countT = {},{}
+        if len(s) != len(t):
+            return False
+
+        for i in range(len(s)):
+             
+
+            if t[i] in countT:
+                countT[t[i]] += 1
+            else:
+                countT[t[i]] = 1
+        
+        if countS.keys() != countT.keys():
+            return False
+
+        for ch in s:
+            if countS[ch] != countT[ch]:
+                return False
+        
+        return True
+                
+
+        
+        
